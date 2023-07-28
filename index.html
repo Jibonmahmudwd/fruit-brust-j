@@ -10,8 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- font awesome -->
+        <script src="https://kit.fontawesome.com/e7cb952cc3.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- daisy and tailwind cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -20,32 +21,17 @@
         .sans-font{
             font-family: 'Public Sans', sans-serif;
         }
+        .opacity img{
+          opacity: 40%;
+        }
+        .fruit-margin{
+          margin-top: -80px;
+          z-index: 2;
+        }
     </style>
 </head>
-<body>
+<body class="sans-font">
     <header>
-        <!-- <div class="navbar bg-base-100">
-            <div class="flex-1">
-              <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
-            </div>
-            <div class="flex-none gap-2">
-              <div class="form-control">
-                <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
-              </div>
-              <div class="dropdown dropdown-end">
-                <ul tabindex="0" class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
-                  <li>
-                    <a class="justify-between">
-                      Profile
-                      <span class="badge">New</span>
-                    </a>
-                  </li>
-                  <li><a>Settings</a></li>
-                  <li><a>Logout</a></li>
-                </ul>
-              </div>
-            </div>
-          </div> -->
         <nav class="container m-auto mt-5 flex justify-between items-center bg-[#F85559;] rounded-full p-15 text-white">
             <div>
                 <ul class="flex gap-x-3 pl-4 ">
@@ -59,18 +45,146 @@
                 <img src="images/logo.png" alt="" class="w-1/4 py-4">
                 <h1 class="text-white font-extrabold">Fruit Brust</h1>
             </div>
-            <div class="pr-3">
-                <input type="text" placeholder="Search here" class="rounded-full h-8 bg-white outline-none">
+            <div class="pr-3 relative">
+                <input type="text" placeholder="Search here" class="rounded-full placeholder:pl-5 h-8 bg-white text-black outline-none">
             </div>
         </nav>
     </header>
 
     <main>
-        
+      <!-- banner slider section  -->
+        <section class="banner-slide container relative m-auto mt-7">
+            <div class=" opacity carousel w-full">
+                <div id="slide1" class="carousel-item relative w-full">
+                  <img src="images/banner1.png" class="w-full" />
+                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide4" class="btn btn-circle">❮</a> 
+                    <a href="#slide2" class="btn btn-circle">❯</a>
+                  </div>
+                </div> 
+                <div id="slide2" class="carousel-item relative w-full">
+                  <img src="images/banner2.png" class="w-full" />
+                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide1" class="btn btn-circle">❮</a> 
+                    <a href="#slide3" class="btn btn-circle">❯</a>
+                  </div>
+                </div> 
+                <div id="slide3" class="carousel-item relative w-full">
+                  <img src="images/banner3.png" class="w-full" />
+                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide2" class="btn btn-circle">❮</a> 
+                    <a href="#slide4" class="btn btn-circle">❯</a>
+                  </div>
+                </div> 
+                <div id="slide4" class="carousel-item relative w-full">
+                  <img src="images/banner4.png" class="w-full" />
+                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide3" class="btn btn-circle">❮</a> 
+                    <a href="#slide1" class="btn btn-circle">❯</a>
+                  </div>
+                </div>
+              </div>
+              <div class="absolute top-12 left-1/3 text-center text-white space-y-4">
+                <h1 class="font-bold text-4xl"> Exotic tastes at your <br>
+                  doorstep</h1>
+                <p>We supply highly quality organic products</p>
+                <button class="btn btn-secondary bg-[#F85559;]">Shop Now</button>
+              </div>
+        </section>
+      <!-- fruit section -->
+         <section class="fruit-margin">
+          <div class="bg-white z-50 rounded-md flex justify-evenly w-3/4 m-auto">
+            <div class="text-center">
+              <img src="images/fruit1.png" class="w-1/11" alt="">
+              <p>Strawberry</p>
+            </div>
+            <div class="text-center">
+              <img src="images/fruit2.png" class="w-1/11" alt="">
+              <p>Strawberry</p>
+            </div>
+            <div class="text-center">
+              <img src="images/fruit3.png" class="w-1/11" alt="">
+              <p>Strawberry</p>
+            </div>
+            <div class="text-center">
+              <img src="images/fruit4.png" class="w-1/11" alt="">
+              <p>Strawberry</p>
+            </div>
+            <div class="text-center">
+              <img src="images/fruit5.png" class="w-1/11" alt="">
+              <p>Strawberry</p>
+            </div>
+         </div>
+         </section>
+      <!-- countdown -->
+         <section class="container m-auto my-12 flex justify-between">
+          <div class="w-1/2">
+            <h1 class="text-4xl font-semibold">
+              Deal of the day
+            </h1>
+            <p>
+              Contrary to popular belief, is not simply random text. It has roots in a piece of classical 
+               Latin literature from 45 BC, making it over 2000 years old.
+            </p>
+          </div>
+
+          <div class="flex gap-5">
+            <div>
+              <span class="countdown font-mono text-4xl">
+                <span style="--value:29;"></span>
+              </span>
+              <p>days</p>
+            </div> 
+            <div>
+              <span class="countdown font-mono text-4xl">
+                <span style="--value:15;"></span>
+              </span>
+              <p>Hours</p>
+            </div> 
+            <div>
+              <span class="countdown font-mono text-4xl">
+                <span style="--value:25;"></span>
+              </span>
+              <p>Min</p>
+            </div> 
+            <div>
+              <span class="countdown font-mono text-4xl">
+                <span style="--value:08;"></span>
+              </span>
+              <p>Sec</p>
+            </div>
+          </div>
+         </section>
+         
     </main>
     
-    <footer>
+    <footer class="bg-black py-20">
+      <div class="flex flex-col items-center gap-y-6">
+        <div class="flex jutify-center items-center gap-5">
+          <img src="images/logo.png" alt="">
+          <h1 class="text-4xl font-semibold">
+            Fruit Burst
+          </h1>
+        </div>
 
+        <ul class="flex gap-5">
+          <li><a href="">Home</a></li>
+          <li><a href="">About Us</a></li>
+          <li><a href=""> Shop</a></li>
+          <li><a href="">All Fruits</a></li>
+          <li><a href=""> Support</a></li>
+          <li><a href=""> My Account</a></li>
+        </ul>
+
+        <div class="text-4xl flex gap-x-7">
+          <i class="fa-brands fa-twitter" style="color: #ffffff;"></i>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-youtube"></i>
+          <i class="fa-brands fa-linkedin-in"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-apple"></i>
+        </div>
+      </div>
     </footer>
 </body>
 </html>
